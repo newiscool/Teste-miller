@@ -1,0 +1,42 @@
+.page-central_cliente{
+  .main{
+    padding-top: 160px;
+  }
+  .central-titulo{
+    h1{
+      font-size: 20px;
+      text-align: center;
+      border-bottom: 1px solid #cecece;
+    }
+  }
+  .central-saudacao{
+    h2{
+      font-size: 14px !important;
+      margin: 10px 0;
+    }
+  }
+  .central-menu{
+    position: relative;
+    h2{
+      font-size: 16px;
+      font-weight: 600;
+      margin: 0;
+    }
+    p{
+      font-size: 13px;
+    }
+    img.bgcolor {
+      display: none;
+    }
+    .icoFilho.central-icons {
+      position: relative;
+      a {
+        position: absolute;
+        width: 15%;
+        height: 15px;
+        top: 0;
+      }
+    }
+  }
+}
+

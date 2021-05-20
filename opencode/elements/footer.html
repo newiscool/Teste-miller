@@ -1,0 +1,156 @@
+<!-- <div class="container block-visted_review">
+    {% if pages.current in ['catalog', 'search'] %}
+        {% if settings.history_position == 1 %}
+            <section class="products-visited ">
+                <h3 class="related-title">Últimos produtos visitados</h3>
+                {% element 'snippets/history' {
+                    'store.id': store.id,
+                    'pages.current': pages.current,
+                    'category.id': category.id,
+                } %}
+            </section>
+        {% endif %}
+    {% endif %}
+    {% if pages.current in ['catalog', 'search'] %}
+        {% if category.id == '38' %}
+            {% element 'snippets/text-base' %}
+        {% endif %}
+        {% if category.id == '42' %}
+            {% element 'snippets/text-corretivos' %}
+        {% endif %}
+    {% endif %}
+    
+    <section class="products-reviews">
+        <h3>Avaliações da loja</h3>
+        {% element 'CustomerReview.reviews' %}
+    </section>
+   
+</div> -->
+{% if pages.current == 'home'  %}
+    {% if utils.is_mobile %}    
+        {% element 'snippets/newsletter' %}
+    {% endif %}
+{% endif  %}
+
+<section class="facebook-recomenda">
+    {% if not utils.is_mobile %}
+        <h2><div class="title-showcase"> Siga no instagram<a href="https://www.instagram.com/barbariusdrift/" target="_blank" class="instaLink"> @barbariusdrift</a></div></h2>
+    {% endif %}
+    {% if utils.is_mobile %}
+        <h2><div class="title-showcase"> Siga no instagram</div></h2>
+        <a href="https://www.instagram.com/barbariusdrift/" target="_blank" class="instaLink"> @barbariusdrift</a>
+        {% endif %}
+    <ul id="instafeed" class="gallery center instacarrossel"></ul>
+            
+</section>
+
+
+<footer id="footer">
+    <div class="footer__container">
+        <nav class="footer__nav">
+            <ul class="footer__list">
+                <li class="footer__list-item"><a href="/">Sobre a {{store.name}}</a></li>
+                <li class="footer__list-item"><a href="/como-comprar">Como comprar</a></li>
+                <li class="footer__list-item"><a href="/seguranca">Segurança</a></li>
+                <li class="footer__list-item"><a href="/envio">Envio e Prazos</a></li>
+                <li class="footer__list-item"><a href="/pagamento">Pagamento</a></li>
+            </ul>
+            <ul class="footer__list">
+                <li class="footer__list-item"><a href="/politica-de-privacidade" class="page__link">Política de privacidade</a></li>
+                <li class="footer__list-item"><a href="/politica-de-trocas-e-devolucoes" class="page__link">Política de trocas e devoluções</a></li>
+                <li class="footer__list-item"><a href="{{ links.contact }}" class="page__link">Fale conosco</a></li>
+                <li class="footer__list-item"><a href="{{ links.central }}" class="page__link">Minha conta</a></li>
+                <li class="footer__list-item"><a href="{{ links.orders }}" class="page__link">Acompanhamento do pedido</a></li>
+            </ul>
+    
+            <ul class="footer__list">
+                <li class="footer__list-item support__contact">
+                    <span>Telefone</span>
+                    <strong>{{ settings.phones }}</strong>
+                </li>
+                <li class="footer__list-item support__contact">
+                    <span>Whatsapp</span>
+                    <strong>{{ settings.whatsapp }}</strong>
+                </li>
+                <li class="footer__list-item support__contact support__contact-mail">
+                    <span>E-mail</span>
+                    <strong>{{ settings.emailum }}</strong>
+                </li>
+                <li class="footer__list-item support__contact support__contact-mail">
+                    <span>Horario de atendimento:</span>
+                    <strong>{{ settings.support }}</strong>
+                </li>
+            </ul>
+            <ul class="footer__list">
+                <li class="footer__list-item support__contact">
+                    <div class="fb-page" data-href="https://www.facebook.com/Barbarius-1591357670998853/" data-tabs="timeline" data-width="300" data-height="130" data-small-header="false" data-adapt-container-width="false" data-hide-cover="false" data-show-facepile="false"><blockquote cite="https://www.facebook.com/Barbarius-1591357670998853/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/Barbarius-1591357670998853/">Barbarius</a></blockquote></div>
+                </li>
+            </ul>
+        </nav>
+    
+        <section class="payment-and-security">
+            <div class="payment">
+                <strong class="footer__title-item">Formas de pagamento</strong>
+                <div class="payment__container">
+                    <div class="payment__credt">
+                        <em>Crédito</em>
+                        {% for payment in paymentMethods.credit %}
+                            <img src="{{ payment.thumbnail.url }}" alt="{{ payment.display_name }}">
+                        {% endfor %}
+                    </div>
+                    <div class="payment__debt">
+                        <em>Boleto</em>
+                        {% for payment in paymentMethods.order %}
+                            <img src="{{ payment.thumbnail.url }}" alt="{{ payment.display_name }}">
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+            <div class="security">
+                <strong class="footer__title-item">Segurança</strong>
+                <div class="security__container">
+                    <div class="security__seal">{{ seals.ebit }} </div>
+                    <div class="security__seal">{{ seals.hackersafe }}</div>              
+                </div>
+            </div>
+        </section>
+        
+        <div class="designby">
+            <div class="designbyblock">                     
+            <figure class="brand-footer">
+                <a href="http://www.agencianewiscool.com.br" target="_blank" title="Agência new is cool" >
+                    <img src="{{ asset('img/newiscool.jpeg') }}" alt="Agência new is cool ">
+                </a>
+            </figure>            
+            <a href="https://lojavirtual.tray.com.br/" class="traylink" target="_blank">                        
+                <img src="{{ asset('img/tray-logo.png') }}" alt="Tray plataforma ">                        
+            </a>
+        </div>
+    </div>
+    {% if utils.is_mobile %}
+        <a href="https://wa.me/+5514981718343" target="_blank" class="whatsapp-floaticon"><i class="fab fa-whatsapp"></i></a>
+    {% endif %}
+    <section class="copyright">
+        <div class="copyright__container">
+            <div class="copyright__text">{{ settings.copyright}}</div>             
+        </div>
+    </section>
+
+</footer>
+
+<script defer>
+jQuery( document ).ready(function() {
+    jQuery("body").addClass("active__body");
+    if (window.innerWidth < 992) {
+        jQuery( "svg.cat__icon.icon--arrow-bottom" ).on( "click", function() {
+            jQuery(this).addClass("rotateDrop");
+            if(jQuery(".dropdown-switcher").hasClass("active__dropdown")) {
+                jQuery(".dropdown-switcher").removeClass("active__dropdown");
+                jQuery("svg.cat__icon.icon--arrow-bottom").removeClass("rotateDrop");
+            } else {
+                jQuery(".dropdown-switcher").addClass("active__dropdown");
+            }
+        });
+    }
+});
+</script>

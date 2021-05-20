@@ -1,0 +1,263 @@
+{"current":{
+  "theme_id":"150699",
+
+      "phones"      :   "(xx) xxxx-xxxx",
+      "whatsapp"    :   "(xx) xxxx-xxxx",
+      "emailum"     :   "sac@barbarius.com",
+      "support"     :   "Segunda à Sexta, das 8 às 18h",
+      "phone"       :   "",
+      "facebook"    :   "",
+      "instagram"   :   "",
+      "youtube"     :   "",
+      "blog"        :   "",
+      "emaildois"   :   "",
+
+      "frete": "Tudo em até <strong>3x s/ juros</strong>",
+      "card" : "3x s/juros",
+      "freeShipping": "À partir de R$150,00",
+      "freeShippingActived": "1",
+      "fretevalor": "200",
+  
+      "marca-01": "",
+      "marca-02": "",
+      "marca-03": "",
+      "marca-04": "",
+      "marca-05": "",
+      "marca-06": "",
+      "marca-07": "",
+      "marca-08": "",
+      "marca-09": "",
+      "marca-10": "",
+
+      "favicon": "",
+
+      "vitrine1": "Lançamentos e Novidades",
+      "quantidade1": "15",
+      "filtros1": "available",
+      "ordem1": "rand",
+      "showCase1active":"1",
+      "categories1":"",
+    
+      "vitrine2": "Itens em promoção",
+      "quantidade2": "15",
+      "filtros2": "promotion",
+      "ordem2": "rand",
+      "showCase2active":"1",
+      "categories2":"",
+
+      "vitrine3": "Nossos kits",
+      "quantidade3": "15",
+      "filtros3": "available",
+      "ordem3": "rand",
+      "showCase3active":"1",
+      "categories3":"",
+
+      "sub01vitrine1": "Bermudas",
+      "sub01quantidade1": "15",
+      "sub01filtros1": "available",
+      "sub01ordem1": "rand",
+      "sub01showCase1active":"1",
+      "sub01categories1":"",
+    
+      "sub01vitrine2": "Camisetas",
+      "sub01quantidade2": "15",
+      "sub01filtros2": "promotion",
+      "sub01ordem2": "rand",
+      "sub01showCase2active":"1",
+      "sub01categories2":"",
+
+      "sub01vitrine3": "Bonés",
+      "sub01quantidade3": "15",
+      "sub01filtros3": "available",
+      "sub01ordem3": "rand",
+      "sub01showCase3active":"1",
+      "sub01categories3":"",
+
+      "sub02vitrine1": "Reparos",
+      "sub02quantidade1": "15",
+      "sub02filtros1": "available",
+      "sub02ordem1": "rand",
+      "sub02showCase1active":"1",
+      "sub02categories1":"",
+    
+      "sub02vitrine2": "Tuning",
+      "sub02quantidade2": "15",
+      "sub02filtros2": "promotion",
+      "sub02ordem2": "rand",
+      "sub02showCase2active":"1",
+      "sub02categories2":"",
+
+      "sub02vitrine3": "Reposição",
+      "sub02quantidade3": "15",
+      "sub02filtros3": "available",
+      "sub02ordem3": "rand",
+      "sub02showCase3active":"1",
+      "sub02categories3":"",
+
+      
+
+      "copyright" : "CNPJ: xx.xxx.xxx/xxxx-xx - End: Nome da rua, Nro - Bairro - São Paulo/SP CEP: xx.xxx-xxx - Tel: (xx) xxxx.xxxx - E-mail: sac@barbarius.com - Horário de atendimento: Seg à Sex das 9h às 18h - Sáb das 9h às 12h",
+         
+      "chamadafrete":"Frete grátis",
+      "condicaofrete":"Compras Acima De R$99",
+
+      "chamadajuros":"6X SEM JUROS",
+      "condicaojuros":"Parcele Nos Cartões",
+      
+      "chamadadesconto":"8% de desconto",
+      "condicaodesconto":"compras à vista",
+
+      "chamadasobrealoja":"",
+      "condicaosobrealoja":"",
+
+      "institucional01":"",
+      "institucional01nome":"Quem Somos",
+
+      "institucional02":"",
+      "institucional02nome":"",
+
+      "institucional03":"",
+      "institucional03nome":"",
+
+      "institucional04":"",
+      "institucional04nome":"",
+
+      "institucional05":"",
+      "institucional05nome":"",
+
+      "institucional06":"",
+      "institucional06nome":"",
+
+      "institucional07":"",
+      "institucional07nome":"",
+
+      
+
+      "duvidas01":"/loja/info.php?loja=500514",
+      "duvidas01nome":"Central de Ajuda",
+
+      "duvidas02":"/loja/info.php?loja=500514#comprar",
+      "duvidas02nome":"Como Comprar",
+
+      "duvidas03":"/regras-de-frete",
+      "duvidas03nome":"Regras de Frete",
+
+      "duvidas04":"/envios-e-prazos",
+      "duvidas04nome":"Trocas e Devoluções!",
+
+      "duvidas05":"/pagamento",
+      "duvidas05nome":"Pagamentos",
+
+      "duvidas06":"",
+      "duvidas06nome":"",
+
+      "duvidas07":"",
+      "duvidas07nome":"",
+
+
+
+      "servicos01":"{{ links.account }}",
+      "servicos01nome":"Dados Pessoais",
+
+      "servicos02":"{{ links.orders }}",
+      "servicos02nome":"Meus Pedidos",
+
+      "servicos03":"{{ links.orders }}",
+      "servicos03nome":"Meus Pontos",
+
+      "servicos04":"/listas",
+      "servicos04nome":"Lista de Desejos!",
+
+      "servicos05":"{{links.register}}",
+      "servicos05nome":"Cadastre-se",
+
+      "servicos06":"",
+      "servicos06nome":"",
+
+      "servicos07":"",
+      "servicos07nome":"",
+
+      "ruler1":"Assine nossa newsletter",
+      "ruler2":"e ganhe R$ 10,00 de desconto!",
+
+      "ruler3":"Frete grátis para todo estado de São Paulo",
+      "ruler4":"Nas compras acima de R$ 119,99",
+
+      "ruler5":"Loja certificada",
+      "ruler6":"Garantia de compra segura",
+
+      "ruler7":"Ganhe um brinde",
+      "ruler8":"Comprando no cartão",
+      
+      "ruler9":"Q6tQfj6wnt8",
+      "ruler9b":"Resenha Corretivo Ruby Rose Naked Skin",
+      "ruler9c":"Experimentamos o corretivo Ruby Rose e descobrimos porque ele é o mais amado do Brasil!!!",
+
+
+      "principalCategory1":"13",
+      "principalCategory2":"15",
+      "bannerPrincipal-01":"",
+      "bannerPrincipal-02":"",
+
+      "nameCategory1":"17",
+      "banner-01":"",
+      
+      "nameCategory2":"19",
+      "banner-02":"",
+
+      "nameCategory3":"",
+      "banner-03":"",
+
+      "nameCategory4":"",
+      "banner-04":"",
+
+      "nameCategory5":"",
+      "banner-05":"",
+
+      "nameCategory6":"",
+      "banner-06":"",
+      
+      "nameCategory7":"",
+      "banner-07":"",
+
+      "nameCategory8":"",
+      "banner-08":"",
+
+      "brands_active":"1",
+      "brand_3_position":"1",
+      "brand_3_image":"",
+      "brand_3_url":"barbarius",
+      "brand_6_position":"2",
+      "brand_6_image":"",
+      "brand_6_url":"marcon",
+      "brand_5_position":"3",
+      "brand_5_image":"",
+      "brand_5_url":"",
+      "brand_2_position":"4",
+      "brand_2_image":"",
+      "brand_2_url":"",
+      "brand_1_position":"5",
+      "brand_1_image":"",
+      "brand_1_url":"",
+      "brand_11_position":"6",
+      "brand_11_image":"",
+      "brand_11_url":"",
+      "brand_8_position":"7",
+      "brand_8_image":"",
+      "brand_8_url":"",
+      "brand_9_position":"8",
+      "brand_9_image":"",
+      "brand_9_url":"",
+      "brand_4_position":"9",
+      "brand_4_image":"",
+      "brand_4_url":"",
+      "brand_12_position":"10",
+      "brand_12_url":"",
+      "brand_7_position":"11",
+      "brand_7_url":"",
+      "brand_10_position":"12",
+      "brand_10_url":""
+
+    
+  }
+}

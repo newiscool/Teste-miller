@@ -1,0 +1,16 @@
+<div class="dropdown-search">
+    <span class="search__triger"><svg class="search__icon icon--search"><use xlink:href="#icon-search"></use></svg></span>
+</div>
+<div class="search-block">
+    <div class="search__content">
+        <form id="search_01" class="search col-md-4" role="form" action="{{ links.search }}" data-search="suggestion">
+            <button class="btn-search search__button"> <span class="search__triger"><svg class="search__icon icon--search color-black"><use xlink:href="#icon-search"></use></svg></span></button>
+           
+            <input type="hidden" name="loja" value="{{ store.id }}">
+            <input type="search" id="search" class="form-control search__input" name="palavra_busca" data-input="suggestion" placeholder="Procurar">
+            <span class="close-icon-search">
+                <span>X</span>
+            </span>
+        </form>
+    </div>
+</div>

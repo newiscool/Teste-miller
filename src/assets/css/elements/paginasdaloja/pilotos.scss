@@ -1,0 +1,63 @@
+section{
+    .area-pilotos{
+        max-width: 1140px;
+        left: 50%;
+        transform: translateX(-50%);
+        position: relative;
+        .lista-pilotos{
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            .lista-pilotos_item{
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: center;
+                position: relative;
+                flex: 0 0 23%;
+                border: 1px solid $cor02;
+                padding: 10px;
+                margin: 10px;
+                figure.foto-piloto {
+                }
+                .nome-piloto{
+                    font-size: 25px;
+                    width: 100%;
+                    margin: 10px 0;
+                    text-align: center;
+                    text-transform: uppercase;
+                }
+                a{
+                    background: $cor02;
+                    font-size: 15px;
+                    padding: 10px 20px;
+                    color: #fff;
+                }
+            }
+        }
+    }
+}
+
+.piloto-category {
+    display: flex;
+    align-items: center;
+    max-width: 1140px;
+    left: 50%;
+    position: relative;
+    transform: translateX(-50%);
+    justify-content: space-between;
+    flex-wrap: wrap;
+    .foto-full {
+        flex: 0 0 45%;
+    }
+    .bio-piloto{
+        flex: 0 0 45%;
+            font-size: 20px;
+            p{
+                font-size: 20px;
+            }
+    }
+    .showcase-carousel-pilotos{
+        width: 100%;
+    }
+}

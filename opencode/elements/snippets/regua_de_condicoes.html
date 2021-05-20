@@ -1,0 +1,154 @@
+<div class="bloco_condicoes">
+    <ul class="lista_condicoes">
+        <li  class="condicoes-item">
+            <svg class="icon_inforuler"><use xlink:href="#icon-cart"></use> </svg>
+            <span class="label-item">Como Comprar</span>
+            <div class="dropdown-content">
+                    <button class=" closeModalinfo"><svg ><use xlink:href="#icon-closemenu"></use></svg></button>
+                    <span>
+                        <p class="first-paragraph hidden-lg"><strong>Como comprar?</strong></p>
+                        <p><strong>Para comprar na Amamos Make é muito fácil:</strong></p>
+                        <p>1) Navegue entre nossos diversos  produtos e clique sobre o botão <strong>COMPRAR</strong> para adicionar um produto ao carrinho de compras. </p>
+                        <p>2) Após selecionar todos produtos clique no ícone do <strong>CARRINHO </strong> para iniciar o processo de finalização.</p>
+                        <p>3) Calcule o frete e clique sobre o botão <strong>FINALIZAR PEDIDO.</strong> </p>
+                        <p>4) Faça seu login caso já tenha cadastro na loja, ou faça seu cadastro, é rápido e simples.</p>
+                        <p>5) Você pode escolher a forma de pagamento entre boleto ou cartão de crédito.</p>
+                        <p>6) Agora basta clicar <strong>FINALIZAR PEDIDO.</strong> Pronto, seu pedido já está feito, mais informações serão enviadas por e-mail. ;)</p>
+                </span>
+            </div>
+        </li>
+        <li class="condicoes-item">
+            <svg class="icon_inforuler icon-troca"><use xlink:href="#icon-troca-facil"></use> </svg>
+            <span class="label-item">Troca Fácil</span>
+            <div class="dropdown-content">
+                <button class=" closeModalinfo"><svg ><use xlink:href="#icon-closemenu"></use></svg></button>
+                <span>
+                    <p class="first-paragraph hidden-lg"><strong>Troca fácil</strong></p>
+                    <p>Você pode trocar qualquer produto, seja por insatisfação com a compra, 
+                    pedido incorreto ou mesmo arrependimento.</p>
+                    <p>É possível fazer a solicitação de troca em até 30 (trinta) dias corridos após a entrega. 
+                    Para isso, o produto deverá estar em sua embalagem original, sem indícios 
+                    de uso e/ou danos no produto. Para os casos de insatisfação com o 
+                    produto adquirido ou arrependimento da compra, cabe ao cliente 
+                    arcar com o custo do frete referente ao envio do produto para troca.</p>
+                    <p>Solicite a troca através do e-mail: sac@barius.com</p>
+                </span>
+            </div>
+        </li>
+        <li class="condicoes-item">
+            <svg class="icon_inforuler icon-credcard"><use xlink:href="#icon-creditcard"></use> </svg>
+            <span class="label-item">Opções de parcelamento</span>
+            <div class="dropdown-content">
+                <button class=" closeModalinfo"><svg ><use xlink:href="#icon-closemenu"></use></svg></button>
+                <div class="table-block">
+                    <span> <p class="first-paragraph hidden-lg"><strong>Opções de parcelamento</strong></p></span>
+                    <ul class="table-list">
+                        <li class="table-list_item">
+                            {% set parcA = ( product.price_offer / 1 ) %}
+                            {% set parcAA = ( product.price_offer / 1 )*(0.05) %}
+                            <span>1x de R$ {{ parcA - parcAA|number_format(2, '.', ',') }} sem juros</span>
+                        </li>
+                        <li class="table-list_item">
+                            {% set parcB = ( product.price_offer / 2 ) %}
+                            <span>2x de R$ {{ parcB|number_format(2, '.', ',') }} sem juros</span>
+                        </li>
+                        <li class="table-list_item">
+                            {% set parcC = ( product.price_offer / 3 ) %}
+                            <span>3x de R$ {{ parcC|number_format(2, '.', ',') }} sem juros</span>
+                        </li>  
+                        <li class="table-list_item">
+                            {% set parcD    = ( product.price_offer / 4 ) %}
+                            {% set parcDD   = ( product.price_offer / 4 )*(2.5/100) %}
+                            {% set parcD_SUM = ( parcDD+parcD ) %}
+                            <span>4x de R$ {{ parcD|number_format(2, '.', ',') }} + juros</span>
+                        </li>                                  
+                    </ul>
+                    <ul class="table-list">
+                        <li class="table-list_item">
+                            {% set parcE    = ( product.price_offer / 5 ) %}
+                            {% set parcEE   = ( product.price_offer / 5 )*(4.5/100) %}
+                            {% set parcE_SUM = ( parcDD+parcD ) %}
+                            <span>5x de R$ {{ parcE|number_format(2, '.', ',') }} + juros</span>
+                        </li>
+                        <li class="table-list_item">
+                            {% set parcF    = ( product.price_offer / 6 ) %}
+                            {% set parcFF   = ( product.price_offer / 6 )*(6.5/100) %}
+                            {% set parcF_SUM = ( parcFF+parcF ) %}
+                            <span>6x de R$ {{ parcF|number_format(2, '.', ',') }} + juros</span>
+                        </li>
+                        <li class="table-list_item">
+                            {% set parcG    = ( product.price_offer / 7 ) %}
+                            {% set parcGG   = ( product.price_offer / 7 )*(8.5/100) %}
+                            {% set parcG_SUM = ( parcGG+parcG ) %}
+                            <span>7x de R$ {{ parcG|number_format(2, '.', ',') }} + juros</span>
+                        </li>
+                        <li class="table-list_item">
+                            {% set parcH    = ( product.price_offer / 8 ) %}
+                            {% set parcHH   = ( product.price_offer / 8 )*(10.5/100) %}
+                            {% set parcH_SUM = ( parcHH+parcH ) %}
+                            <span>8x de R$ {{ parcH|number_format(2, '.', ',') }} + juros</span>
+                        </li>
+                    </ul >
+                     <ul class="table-list">
+                        <li class="table-list_item">
+                            {% set parcI    = ( product.price_offer / 9 ) %}
+                            {% set parcII   = ( product.price_offer / 9 )*(12.5/100) %}
+                            {% set parcI_SUM = ( parcII+parcI ) %}
+                            <span>9x de R$ {{ parcI|number_format(2, '.', ',') }} + juros</span>
+                        </li>
+                        <li class="table-list_item">
+                            {% set parcJ    = ( product.price_offer / 10 ) %}
+                            {% set parcJJ   = ( product.price_offer / 10 )*(14.5/100) %}
+                            {% set parcJ_SUM = ( parcJJ+parcJ ) %}
+                            <span>10x de R$ {{ parcJ|number_format(2, '.', ',') }} + juros</span>
+                        </li>
+                        <li class="table-list_item">
+                            {% set parcK    = ( product.price_offer / 11 ) %}
+                            {% set parcKK   = ( product.price_offer / 11 )*(16.5/100) %}
+                            {% set parcK_SUM = ( parcKK+parcK ) %}
+                            <span>11x de R$ {{ parcK|number_format(2, '.', ',') }} + juros</span>
+                        </li>
+                        <li class="table-list_item">
+                            {% set parcL    = ( product.price_offer / 12 ) %}
+                            {% set parcLL   = ( product.price_offer / 12 )*(20/100) %}
+                            {% set parcL_SUM = ( parcLL+parcL ) %}
+                            <span>12x de R$ {{ parcL|number_format(2, '.', ',') }} + juros</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </li>
+        <li class="condicoes-item">
+            <svg class="icon_inforuler icon-prazo"><use xlink:href="#icon-delivery-truck"></use> </svg>
+            <span class="label-item">Prazos e Entrega</span>
+            <div class="dropdown-content">
+                <button class=" closeModalinfo"><svg ><use xlink:href="#icon-closemenu"></use></svg></button>
+                <span>
+                    <p class="first-paragraph hidden-lg"><strong>Prazos e entregas</strong></p>
+                    <p>Todos pedidos são enviados em até 1 dia útil após a 
+                    confirmação de pagamento. </p>
+                    <p>O prazo para a entrega varia de acordo com a forma de envio 
+                    escolhida.</p>
+                    <p>Você poderá rastrear a entrega através do código de rastreio, 
+                    que é enviado via e-mail. Se persistir dúvidas, entre em contato 
+                    conosco através do telefone: <strong>(XX) XXXX-XXXX</strong>, ou por e-mail: <strong>sac@barbarius.com </strong></p>
+                </span>
+            </div>
+        </li>
+        <li class="condicoes-item">
+            <svg class="icon_inforuler icon-frete"><use xlink:href="#icon-delivery-truck"></use> </svg>
+            <span class="label-item">Frete Grátis</span>
+            <div class="dropdown-content">
+                <button class=" closeModalinfo"><svg ><use xlink:href="#icon-closemenu"></use></svg></button>
+                <span>
+                    <p class="first-paragraph hidden-lg"><strong>Frete grátis</strong></p>
+                    <p>Regras para frete grátis, selecione o seu estado:</p>
+                    <div class="bloco-frete">
+
+                        {% element 'snippets/tabela-frete' %}
+                    </div>
+                </span>
+            </div>
+        </li>
+    </ul>
+</div>

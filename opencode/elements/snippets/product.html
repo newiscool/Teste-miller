@@ -1,0 +1,86 @@
+
+<li class="showcase_list-item" itemscope itemtype="http://schema.org/SomeProducts">
+    <div class="border {% if product.available and product.stock > 0 %} disponivel {% else %} indisponivel {% endif %}">
+        {% if product.price_offer > 0 %}
+            <div class="product__offer">
+                {% set percent = 100 - ( product.price_offer / product.price ) * 100 %}
+                <span> -{{ percent|number_format }}%</span>
+            </div>
+        {% endif %}
+        {% if product.available and product.stock > 0  %}
+            <div class="labels">
+                {% if product.new %}
+                    {% if Image('new') %}
+                        <span class="botao-new">{{ Image('new') }}</span>
+                    {% else %}
+                        <span class="label new">Novo</span>
+                    {% endif %}
+                {% endif %}
+                {% if product.featured %}
+                    {% if Image('featured') %}
+                        <span class="featured">{{ Image('featured') }}</span>
+                    {% else %}
+                        <span class="label featured">+ Brinde</span>
+                    {% endif %}
+                {% endif %}
+            </div>
+        {% endif %}
+        {% if product.available and product.stock == 0  %}
+            {% if Image('unavailable_button') %}
+                <div class="labels">
+                    <span class="unavailable">{{ Image('unavailable_button') }}</span>
+                </div>
+            {% else %}
+                <div class="labels">
+                    <span class="label label-default unavailable">Esgotado</span>
+                </div>
+            {% endif %} 
+            {% if product.additional_button %}
+                {% if Image('additional_button') %}
+                        <span class="free-shipping">{{ Image('additional_button') }}</span>
+                {% else %}
+                        <span class="free-shipping">Frete Grátis Sul e Sudeste</span>
+                {% endif %}
+            {% endif %}
+        {% endif %}
+
+            <figure class="product-image">
+                <a href="{{ product.link }}">
+                    <img class="img-responsive" src="{{ product.images[0].full }}" alt="{{ product.name }}">
+                </a>
+            </figure>
+
+            {% if product.has_variation %}
+            <div id="demoss{{product.id}}" class="demoss{{product.id}} variationShowcase"></div>
+            {% else %}
+            <div class="variation-qtd variation-qtd-vazio">
+                <h3></h3>
+            </div>
+            {% endif %}
+            <span class="showcase-brand">{{ product.brand }}</span>
+            <div class="product-name" itemprop="name">
+                <a href="{{ product.link }}">
+                    <h3>{{ product.name|slice(0,80) }}</h3>
+                  </a>
+            </div>
+            {% if product.ranking %}
+            <div class="product__rating-wrapper">
+                <span class="product__rating__stars" data-stars-count="{{ product.ranking.rating }}">
+                  <span class="star{{ product.ranking.rating }}"></span><span class="ranking-nota-final">({{ product.ranking.rating }})</span>
+                </span>
+            </div>
+            {% endif %}
+        {% if product.available and product.stock > 0  %}
+        <div class="product__prices">
+            {% if product.price_offer > 0 %}
+                <h4 class="preco-de">R$ {{ product.price|currency }}</h4>
+                <h4 class="preco-por"> R$ {{ product.price_offer|currency }}</h4>
+            {% else %}
+                <h4 class="preco-de"></h4>
+                <h4 class="preco-por"> R$ {{ product.price|currency }}</h4>
+            {% endif %}
+        </div>
+     
+        {% endif %}
+    </div>
+</li>

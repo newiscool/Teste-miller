@@ -1,0 +1,182 @@
+<h1 class="hidden">Barbarius Drift - Tudo em acessórios e vestuario do mundo drift</h1>
+
+<section class="categorias-principais">
+    <ul class="categoria-principais_lista">
+        {% for child in category.children %}
+            {% if child.id == settings.nameCategory1 %}
+                <li class="categoria-principais_lista-item" data-category-id="{{ child.id }}">
+                    <a class="lista-item_links-principais" href="{{ category.link }}">
+                        <span>
+                            {{ child.name }}
+                        </span>
+                        <img src="{{asset (settings['banner-01']) }} " alt="{{category.name}}">
+                    </a>
+                </li>
+            {% endif %}
+            {% if child.id == settings.nameCategory2 %}
+                <li class="categoria-principais_lista-item" data-category-id="{{ child.id }}">
+                    <a class="lista-item_links-principais" href="{{ category.link }}">
+                        <span>
+                            {{ child.name }}
+                        </span>
+                        <img src="{{asset (settings['banner-02']) }} " alt="{{category.name}}">
+                    </a>
+                </li>
+            {% endif %}
+        {% endfor %}
+        {% if not settings.nameCategory2%}
+        <li class="categoria-principais_lista-item" data-category-id="{{ child.id }}">
+            <a class="lista-item_links-principais" href="{{ category.link }}">
+                <span>
+                    {{ child.name }}
+                </span>
+                <img src="{{asset (settings['banner-02']) }} " alt="{{category.name}}">
+            </a>
+        </li>
+        {%endif%}
+        {% if not settings.nameCategory2%}
+        <li class="categoria-principais_lista-item" data-category-id="{{ child.id }}">
+            <a class="lista-item_links-principais" href="{{ category.link }}">
+                <span>
+                    {{ child.name }}
+                </span>
+                <img src="{{asset (settings['banner-02']) }} " alt="{{category.name}}">
+            </a>
+        </li>
+        {%endif%}
+    </ul>
+</section>
+<h1 class="hidden">Barbarius Drift - Tudo em acessórios e vestuario do mundo drift</h1>
+<div class="container">
+<!-- VITRINE 1 -->
+{% if settings.showCase1active > 0  %}
+    <section class="showcase-carousel">
+        {% if settings.sub01categories1 > 0  %}
+            {% set products = Products({
+                'filter': ['new', 'available'],
+                'limit': settings.sub01quantidade1,
+                'order': {
+                    'stock': 'desc',
+                },
+                'categories': [ settings.sub01categories1 ]
+            }) %}
+        {% else %}
+            {% set products = Products({
+                'filter': ['new', 'available'],
+                'limit': settings.sub01quantidade1,
+                'order': {
+                    'stock': 'desc',
+                },
+            }) %}
+        {% endif %}
+        {% element 'snippets/showcase' {
+            "showcaseTitle": ' <div class="title-showcase"><h2 class="banners-extra__title title--main">' ~  settings.sub01vitrine1  ~ '</h2></div>',
+            "products": products} %}
+    </section>
+{% endif %}
+<section class="banners-extras">
+    <div class="center banners-extras__center">
+        <div class="banners-extras__item">
+            {{ banner.extra1 }}
+        </div> 
+        <div class="banners-extras__item">
+            {{ banner.extra2 }}
+        </div>
+        <div class="banners-extras__item">
+            {{ banner.extra3 }}
+        </div>
+    </div>
+</section>
+<!-- VITRINE 2 -->
+{% if settings.sub01showCase2active > 0  %}
+    <section class="showcase-carousel">
+        {% if settings.sub01categories2 > 0  %}
+            {% set products = Products({
+                'filter': ['available'],
+                'limit': settings.sub01quantidade2,
+                'order': {
+                    'stock': 'desc',
+                    'price': 'desc',
+                },
+                'categories': [ '68' ]
+            }) %}
+        {% else %}
+            {% set products = Products({
+                'filter': ['available'],
+                'limit': settings.sub01quantidade2,
+                'order': {
+                    'stock': 'desc',
+                },
+            }) %}
+        {% endif %}
+        {% element 'snippets/showcase' {
+            "showcaseTitle": ' <div class="title-showcase"><h2 class="banners-extra__title title--main">' ~  settings.sub01vitrine2  ~ '</h2></div>',
+            "products": products} %}
+    </section>
+{% endif %}
+<section class="banners-extras">
+    <div class="center banners-extras__center">
+        <div class="banners-extras__item">
+            {{ banner.extra1 }}
+        </div> 
+        <div class="banners-extras__item">
+            {{ banner.extra2 }}
+        </div>
+        <div class="banners-extras__item">
+            {{ banner.extra3 }}
+        </div>
+    </div>
+</section>
+</div>
+<div class="container">
+ <!-- VITRINE 3 -->
+{% if settings.sub01showCase3active > 0  %}
+    <section class="showcase-carousel">
+        {% if settings.categories3 > 0  %}
+            {% set products = Products({
+                'filter': ['available'],
+                'limit': settings.sub01quantidade3,
+                'order': rand,
+                'order': {
+                    'stock': 'desc',
+                    'id': 'desc'
+                },
+                'categories': [ '223' ]
+            }) %}
+        {% else %}
+            {% set products = Products({
+                'filter': [settings.sub01filtros3],
+                'limit': settings.sub01quantidade3,
+                'order': settings.sub01ordem3,
+                'order': {
+                    'stock': 'desc',
+                    'id': 'desc'
+                },
+            }) %}
+        {% endif %}
+        {% element 'snippets/showcase' {
+            "showcaseTitle": ' <div class="title-showcase"><h2 class="banners-extra__title title--main">' ~  settings.sub01vitrine3  ~ '</h2></div>',
+            "products": products} %}
+    </section>
+{% endif %}
+
+<section class="banners-extras">
+    <div class="center banners-extras__center">
+        <div class="banners-extras__item">
+            {{ banner.extra1 }}
+        </div> 
+        <div class="banners-extras__item">
+            {{ banner.extra2 }}
+        </div>
+        <div class="banners-extras__item">
+            {{ banner.extra3 }}
+        </div>
+    </div>
+</section>
+</div>
+{% element 'snippets/brands' %}
+
+
+</section>
+
+

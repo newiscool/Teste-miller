@@ -1,0 +1,56 @@
+<section class="servicos_bloco">
+    <ul class="servicos_list">
+        {% if banner.extra1 %}
+          <li class="servicos_list-item">
+              <a href=" {{ settings.servicoslink01 }} " class="servicos_list-link " name="servicoslink01">
+                  <!-- <img src="{{asset (settings['servicos-01']) }} " class="servicos_list-img" alt="{{settings['servicos-01']}}"> -->
+                  {{ banner.extra1 }}
+                  <label for="servicoslink01" class="center">{{ settings.labelname01 }}Nome do Banner1</label>
+              </a>
+          {% if banner.extra2 %}
+              <a href=" {{ settings.servicoslink02 }} " class="servicos_list-link " name="servicoslink02">
+                  <!-- <img src="{{asset (settings['servicos-02']) }} " a class="servicos_list-img" alt="{{settings['servicos-02']}}"> -->
+                  {{ banner.extra2 }}
+                  <label for="servicoslink01" class="center">{{ settings.labelname02 }}Nome do Banner2</label>
+              </a>
+          {% endif %}
+          </li>
+      {% endif %}
+  
+      {% if banner.extra3 %}
+          <li class="servicos_list-item">
+              <a href=" {{ settings.servicoslink03 }} " class="servicos_list-link ">
+                  <!-- <img src="{{asset (settings['servicos-03']) }} " a class="servicos_list-img" alt="{{settings['servicos-03']}}"> -->
+                  {{ banner.extra3 }}
+                  <label for="servicoslink01" class="center">{{ settings.labelname02 }}Nome do Banner3</label>
+              </a>
+          </li>
+      {% endif %}
+      {% if banner.extra4 %}
+          <li class="servicos_list-item">
+              <a href=" {{ settings.servicoslink04 }} " class="servicos_list-link ">
+                  <!-- <img src="{{asset (settings['servicos-04']) }} " a class="servicos_list-img" alt="{{settings['servicos-04']}}"> -->
+                  {{ banner.extra4 }}
+                  <label for="servicoslink01" class="center">{{ settings.labelname04 }}Nome do Banner4</label>
+              </a>
+          </li>
+      {% endif %}
+      {% if banner.extra5 %}
+          <li class="servicos_list-item">
+              <a href=" {{ settings.servicoslink05 }} " class="servicos_list-link ">
+                  <!-- <img src="{{asset (settings['servicos-05']) }} " a class="servicos_list-img" alt="{{settings['servicos-05']}}"> -->
+                  {{ banner.extra5 }}
+                  <label for="servicoslink01" class="center">{{ settings.labelname05 }}Nome do Banner5</label>
+              </a>
+      {% if banner.extra6 %}
+              <a href=" {{ settings.servicoslink06 }} " class="servicos_list-link ">
+                  <!-- <img src="{{asset (settings['servicos-06']) }} " a class="servicos_list-img" alt="{{settings['servicos-06']}}"> -->
+                  {{ banner.extra6 }}
+                  <label for="servicoslink01" class="center">{{ settings.labelname06 }}Nome do Banner6</label>
+              </a>
+      {% endif %}
+          </li>
+      {% endif %}
+  
+    </ul>
+  </section>

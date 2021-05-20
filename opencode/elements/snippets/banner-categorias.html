@@ -1,0 +1,26 @@
+<section class="categorias-principais">
+    <ul class="categoria-principais_lista">
+        {% for category in categories %}
+            {% if category.id == settings.principalCategory1 %}
+                <li class="categoria-principais_lista-item" data-category-id="{{ category.id }}">
+                    <a class="lista-item_links-principais" href="{{ category.link }}">
+                        <span>
+                            {{ category.name }}
+                        </span>
+                        <img src="{{asset (settings['bannerPrincipal-01']) }} " alt="{{category.name}}">
+                    </a>
+                </li>
+            {% endif %}
+            {% if category.id == settings.principalCategory2 %}
+                <li class="categoria-principais_lista-item" data-category-id="{{ category.id }}">
+                    <a class="lista-item_links-principais" href="{{ category.link }}">
+                        <span>
+                            {{ category.name }}
+                        </span>
+                        <img src="{{asset (settings['bannerPrincipal-02']) }} " alt="{{category.name}}">
+                    </a>
+                </li>
+            {% endif %}
+        {% endfor %}
+    </ul>
+</section>
